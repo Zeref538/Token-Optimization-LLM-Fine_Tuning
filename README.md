@@ -1,4 +1,4 @@
-# Lean
+# Token-Optimization LLM Fine-Tuning
 
 **[Live demo →](https://zeref538.github.io/lean-lora-finetune/)**
 

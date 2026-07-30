@@ -1,4 +1,4 @@
-# Lean: Case Study
+# Token-Optimization LLM Fine-Tuning: Case Study
 
 ## 1. The problem
 
@@ -9,7 +9,7 @@ and latency (more tokens to generate = slower response). If a model can be
 taught to give the *same correct answer* in fewer tokens, that's a direct,
 measurable efficiency win — cheaper and faster, with no loss of quality.
 
-Lean's goal: fine-tune a small open-weight model to be more concise while
+The goal: fine-tune a small open-weight model to be more concise while
 staying exactly as correct, on a narrow, well-defined task (grade-school math
 word problems, GSM8K), and prove the gain with a mechanical measurement
 rather than a vibe.
@@ -187,14 +187,14 @@ regression worth checking rather than trusting on 15 examples.
 
 **Results, n=15 (initial, smoke-test scale):**
 
-| | Base model | Fine-tuned (Lean adapter) |
+| | Base model | Fine-tuned (LoRA adapter) |
 |---|---|---|
 | Accuracy | 60.0% | 40.0% |
 | Mean output tokens | 313.3 | 93.6 |
 
 **Results, n=100 (confirmation run, held-out GSM8K test questions):**
 
-| | Base model | Fine-tuned (Lean adapter) |
+| | Base model | Fine-tuned (LoRA adapter) |
 |---|---|---|
 | Accuracy | 69.0% | 51.0% |
 | Mean output tokens | 299.4 | 93.8 |
@@ -341,7 +341,7 @@ finding.
 
 ## 8. Revised honest summary
 
-Lean is a working, end-to-end compression-distillation LoRA pipeline that
+This is a working, end-to-end compression-distillation LoRA pipeline that
 reliably teaches a small model to generate far fewer tokens per answer
 (consistently ~70-71% fewer across three independent fine-tunes), at a real,
 confirmed accuracy cost. Three hypotheses for the cause/shape of that cost
@@ -421,7 +421,7 @@ depends on whether the application can tolerate a 5-point accuracy dip for
 
 ## 10. Revised honest summary
 
-Lean is a working, end-to-end fine-tuning pipeline that produced four
+This is a working, end-to-end fine-tuning pipeline that produced four
 independent LoRA adapters, each testing a specific hypothesis about how to
 trade tokens for accuracy on GSM8K math reasoning, with two hypotheses
 falsified by evidence and one recipe (v4) that substantially improved the
