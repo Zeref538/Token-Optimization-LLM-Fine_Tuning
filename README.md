@@ -1,6 +1,6 @@
 # Token-Optimization LLM Fine-Tuning
 
-**[Live demo →](https://zeref538.github.io/lean-lora-finetune/)**
+**[Live demo →](https://zeref538.github.io/Token-Optimization-LLM-Fine_Tuning/)**
 
 Fine-tune a free open-weights model (Qwen2.5-1.5B-Instruct) via LoRA to say
 the same thing in fewer tokens, without giving up accuracy. Four fine-tunes,
