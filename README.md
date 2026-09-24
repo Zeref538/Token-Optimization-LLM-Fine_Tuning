@@ -81,6 +81,11 @@ Full reasoning, the self-distillation recipe, and why it works is in
    each model on a few held-out questions, saved to `data/demo_examples.json`
    for a portfolio demo (no live model calls needed to show the comparison).
 
+## Case study page
+
+`docs/index.html` is generated: edit `docs/template.html`, then run
+`python docs/build_site.py` (it inlines `data/demo_examples.json`).
+
 ## Test
 
 `python data/test_compress.py` checks the correctness gates
